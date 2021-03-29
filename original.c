@@ -8,9 +8,12 @@
 #define N 1000000
 
 
-void randomArray(int array[], int n){
-    for (int i = 0; i < n; i++)
-        array[i] = rand() % 100;
+void buildArray(int array[], int n){
+    int max = 1000;
+    for (int i = 0; i < n; i++){
+        array[i] = max;
+        max--;
+    }
 }
 
 
@@ -42,17 +45,33 @@ void Bucket_Sort(int array[], int n, int max, int min) {
 
 
 int main() {
-    int array[N], i, num = 1000000, max = 0, min = 0;
-    randomArray(array, num);
+    int array[N], i, n, max, min, iter = N/20;
+    double t_start, t_wall_clock;
+    
+    for (n = iter; n <= N; n += iter) {
 
-    for (i = 0; i < num; i++) {
-        if (array[i] > max)
-            max = array[i];
-        if (array[i] < min)
-            min = array[i];
-    }
-    if (min >= 0)
+        max = 0;
         min = 0;
-    Bucket_Sort(array, num, max, min);
+
+        buildArray(array, n);
+        
+        for (i = 0; i < n; i++) {
+            if (array[i] > max)
+                max = array[i];
+            if (array[i] < min)
+                min = array[i];
+        }
+
+        if (min >= 0)
+            min = 0;
+        
+        t_start = omp_get_wtime();
+        Bucket_Sort(array, n, max, min);
+        t_wall_clock = omp_get_wtime() - t_start;
+        printf("n = %d \t time = %f\n", n, t_wall_clock);
+        // printf("%d & %f \\\\ \n", n, t_wall_clock);
+        // printf("%d %f\n", n, t_wall_clock);
+    }
+
     return 0;
 }
