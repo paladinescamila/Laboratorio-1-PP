@@ -1,4 +1,4 @@
-// Código sacado del siguiente repositorio en git https://github.com/hemanth-kumarv/Bucketsort-in-C/blob/master/bucketsort.c
+// Code taken from the following git repository: https://github.com/hemanth-kumarv/Bucketsort-in-C/blob/master/bucketsort.c
 // Author: hemanth-kumarv
 // 10 Mar 2019
 
