@@ -8,7 +8,7 @@
 #define N 1000000
 
 
-void BuildArray(int array[], int n){
+void Build_Array(int array[], int n){
     int max = 1000;
     for (int i = 0; i < n; i++){
         array[i] = max;
@@ -48,7 +48,7 @@ int main() {
     int array[N], i, n = N, max = 0, min = 0;
     double t_start, t_wall_clock;
 
-    BuildArray(array, n);
+    Build_Array(array, n);
     
     for (i = 0; i < n; i++) {
         if (array[i] > max)
@@ -63,7 +63,7 @@ int main() {
     t_start = omp_get_wtime();
     Bucket_Sort(array, n, max, min);
     t_wall_clock = omp_get_wtime() - t_start;
-    printf("n = %d, time = %f\n", n, t_wall_clock);
+    // printf("n = %d, time = %f\n", n, t_wall_clock);
 
     return 0;
 }
