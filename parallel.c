@@ -40,13 +40,17 @@ void Parallel_BS(int array[], int n, int max, int min) {
 
     #pragma omp parallel for
     for (i = -min; i > 0; i--)
-        for (; cneg[i] > 0; (cneg[i])--)
+        for (; cneg[i] > 0; (cneg[i])--){
+            #pragma omp critical
             array[j++] = -i;
+        }
 
     #pragma omp parallel for
     for (i = 0; i <= max; i++)
-        for (; cpos[i] > 0; (cpos[i])--)
+        for (; cpos[i] > 0; (cpos[i])--){
+            #pragma omp critical
             array[j++] = i;
+        }
 
 }
 

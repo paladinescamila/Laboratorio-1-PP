@@ -1,0 +1,199 @@
+18:56:10 [info] [coderrect] [main.go:915:main.main] Start a new session. version=(hpc) 1.0.0 build 1614743351
+, args=[coderrect -t gcc -fopenmp -g parallel.c]    
+18:56:10 [info] [coderrect] [main.go:931:main.main] Check cleanBuild flag. cleanBuild=false    
+18:56:10 [info] [coderrect] [main.go:1000:main.main] Passed cmdline args via env. cmdlineOpts={"Opts":["-report.enableTerminal=true","-logger.logFolder=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/logs"]}    
+18:56:10 [info] [coderrect] [main.go:1047:main.main] Create the build directory. dir=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build    
+18:56:10 [info] [coderrect] [main.go:1137:main.main] Execute the build command to generate BC files. cmdline=[gcc -fopenmp -g parallel.c]    
+18:56:10 [info] [coderrect-clang] [main.go:60:main.main] Start a new session. args=[/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/coderrect-clang -fopenmp -g parallel.c]    
+18:56:10 [debug] [coderrect-clang] [compiler.go:270:shared.Compile] Gllvm start. compiler=clang, args=[-fopenmp -g parallel.c]    
+18:56:10 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=execfiles key=/home/camila/Documentos/Laboratorio-1-PP/a.out, value=    
+18:56:10 [info] [coderrect-clang] [compiler.go:301:shared.Compile] Add a binary into db. path=/home/camila/Documentos/Laboratorio-1-PP/a.out    
+18:56:10 [debug] [coderrect-clang] [compiler.go:333:shared.Compile] Compiling for bitcode. file=/home/camila/Documentos/Laboratorio-1-PP/a.out    
+18:56:10 [info] [coderrect-clang] [compiler.go:416:shared.buildBitcode] Generating bc file for binary. complilerExecName=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/clang, target=/home/camila/Documentos/Laboratorio-1-PP/a.out    
+18:56:10 [info] [coderrect-clang] [compiler.go:434:shared.buildBitcode] Derive BC file path from the binary. coderrectCwd=/home/camila/Documentos/Laboratorio-1-PP, BCFilePath=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+18:56:10 [debug] [coderrect-clang] [compiler.go:459:shared.buildBitcode] More information. inputFiles=[parallel.c], objectFiles=[], linkingLibFiles=[]    
+18:56:10 [debug] [coderrect-clang] [parser.go:497:shared.getArtifactNames] Generate the BC file path for the object file. srcFile=parallel.c, objFilePath=.parallel.c.o, BCFilePath=.parallel.c.o.bc    
+18:56:10 [debug] [coderrect-clang] [compiler.go:496:shared.buildBitcode] Try to build BC file. srcFile=parallel.c, bcFile=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+18:56:10 [debug] [coderrect-clang] [compiler.go:753:shared.skipSrcFile] CODERRECT building bitcode for file: parallel.c
+    
+18:56:10 [debug] [coderrect-clang] [compiler.go:869:shared.buildBitcodeFile] Build the BC file. compiler=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/clang, args=[-fopenmp -g -O1 -Wno-everything -g -Xclang -S -Xclang -emit-llvm -fno-discard-value-names -D_Float128=double -Xclang -disable-llvm-optzns -c parallel.c -o /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc]    
+18:56:12 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=/home/camila/Documentos/Laboratorio-1-PP/.parallel.c.o, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+18:56:12 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=parallel.c.o, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+18:56:12 [debug] [coderrect-clang] [compiler.go:678:shared.buildBitcode] Find the right llvm-link to use. llvm-link=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/llvm-link    
+18:56:12 [info] [coderrect-clang] [utils.go:95:shared.writeLinkFile] Create link file. linkFile=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.link, content=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/llvm-link;/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc;/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+18:56:12 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=/home/camila/Documentos/Laboratorio-1-PP/a.out, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+18:56:12 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=a.out, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+18:56:12 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=linkfiles key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.link    
+18:56:12 [warning] [coderrect-clang] [compiler.go:81:shared.insertIntoBoltDb.func1] Failed to open bucket, recreated. boltDbPath=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/bold.db, bucketName=linkfiles    
+18:56:12 [info] [coderrect-clang] [compiler.go:686:shared.buildBitcode] Create the BC file. file=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+18:56:12 [debug] [coderrect-clang] [main.go:67:main.main] Compiled is done. exitCode=0    
+18:56:13 [info] [coderrect] [main.go:1157:main.main] Finish the build of the project. cmdline=(export LD_PRELOAD=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/libear.so; /home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/coderrect-exec gcc -fopenmp -g parallel.c )    
+18:56:13 [debug] [coderrect] [main.go:328:main.getAllExecFromDB] Find all the executable file path from bolt db.    
+18:56:13 [info] [coderrect] [main.go:1221:main.main] On-demand link BC file. bcFile=/home/camila/Documentos/Laboratorio-1-PP/a.out.bc    
+18:56:13 [debug] [coderrect] [compiler.go:119:shared.queryBoltDb] result from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/a.out, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+18:56:13 [debug] [coderrect] [compiler.go:119:shared.queryBoltDb] result from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.link    
+18:56:13 [debug] [coderrect] [compiler.go:119:shared.queryBoltDb] result from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc, value=    
+18:56:13 [info] [coderrect] [compiler.go:734:shared.LinkBitcode] On-demand linking. linker=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/llvm-link, linkArgs=[-o /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc]    
+18:56:14 [debug] [coderrect] [compiler.go:140:shared.deleteFromBoltDb] delete key from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+18:56:14 [info] [coderrect] [main.go:1230:main.main] Analyzing BC file to detect races. bcFile=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.bc    
+18:56:14 [info] [coderrect] [main.go:1263:main.main] Generating the json file. jsonPath=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/tmp/coderrect-1617407770/coderrect_a.out_report.json    
+18:56:14 [debug] [racedetect] [Log.cpp:46] Logging configs. level=1, logFolder=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/logs, logFile=log.current, enableTerminal=false, enableFile=true
+18:56:14 [info] [racedetect] [RaceDetector.cpp:602] Loading IR From File: /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc
+18:56:14 [info] [racedetect] [RaceDetector.cpp:425] Found stub file: /home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/stub/linux/std_thread.stub.bc
+18:56:14 [info] [racedetect] [RaceDetector.cpp:647] Running Compiler Optimization Passes
+18:56:14 [debug] [racedetect] [LockUnlockRewriter.cpp:131] Did not find lock/unlock API: lock=__kmpc_ordered, unlock=__kmpc_end_ordered
+18:56:14 [debug] [racedetect] [LockUnlockRewriter.cpp:131] Did not find lock/unlock API: lock=_mp_bcs_nest_red, unlock=_mp_ecs_nest_red
+18:56:14 [debug] [racedetect] [RemoveExceptionHandlerPass.cpp:25] Processing Exception Handlers
+18:56:14 [info] [racedetect] [CanonicalizeGEPPass.cpp:132] Canonicalizing Loops
+18:56:14 [info] [racedetect] [ConstantPropagationPass.cpp:173] Propagating Constants
+18:56:14 [info] [racedetect] [RaceDetector.cpp:701] Running Compiler Optimization Passes (Phase II)
+18:56:15 [info] [racedetect] [SolverBase.h:399] Pointer Analysis Starting to Solve
+18:56:15 [debug] [racedetect] [PartialUpdateSolver.h:317] PTA Iteration No: 0 - nodes: 523
+18:56:15 [debug] [racedetect] [PartialUpdateSolver.h:317] PTA Iteration No: 1 - nodes: 523
+18:56:15 [debug] [racedetect] [PartialUpdateSolver.h:317] PTA Iteration No: 2 - nodes: 523
+18:56:15 [info] [racedetect] [SolverBase.h:404] Pointer Analysis Finished Solving
+18:56:15 [debug] [racedetect] [SolverBase.h:407] PTA constraint graph node number 523, callgraph node number 46
+18:56:15 [info] [racedetect] [RaceDetectionPass.cpp:1912] Start Building SHB
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:1921] Start travering thread 0, thread start = cr_main
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : cr_main
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : main
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : Build_Array
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : Build_Array
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : Parallel_BS
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined.
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined.
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..2
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.1
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.1
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..2
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..4
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.3
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.3
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..4
+18:56:15 [debug] [racedetect] [RDUtil.cpp:663] NotParallelFunctionPairs did not match
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..6
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.5
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.5
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..6
+18:56:15 [debug] [racedetect] [RDUtil.cpp:663] NotParallelFunctionPairs did not match
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..8
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.7
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.7
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..8
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : Parallel_BS
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : main
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : cr_main
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:1979] Finish Building SHB. time=0.0629244s
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:1980] Number of threads: 1 
+18:56:15 [info] [racedetect] [RaceDetectionPass.cpp:1982] Start Race Detection
+18:56:15 [info] [racedetect] [RaceDetectionPass.cpp:1295] skip detecting races in a single-threaded program
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:1992] Finished Race Detection. time=6.761e-06s
+18:56:15 [debug] [racedetect] [RaceDetectionPass.cpp:2180] Checking for missed omp regions
+18:56:15 [info] [reporter] [main.go:824:main.main] Check the cmdlineenv. cmdlineEnv={"Opts":["-report.enableTerminal=true","-logger.logFolder=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/logs"]}    
+18:56:15 [debug] [reporter] [main.go:515:main.diffRaceJSON] Diff file. base=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/basereport/raw_a.out.json, path=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/raw_a.out.json    
+18:56:15 [warning] [reporter] [main.go:523:main.diffRaceJSON] Open base file error. path=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/basereport/raw_a.out.json, err=open /home/camila/Documentos/Laboratorio-1-PP/.coderrect/basereport/raw_a.out.json: no such file or directory    
+18:56:16 [info] [reporter] [main.go:649:main.buildBase] read report.keepBase. value=false    
+18:56:16 [debug] [reporter] [main.go:661:main.buildBase] Building base report, src=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/report-tmp783625621, base=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/basereport    
+18:56:16 [debug] [reporter] [main.go:665:main.buildBase] Copying to base from file: /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/raw_a.out.json    
+18:56:16 [debug] [reporter] [main.go:673:main.buildBase] Get and set GIT log to file    
+18:56:16 [info] [reporter] [main.go:995:main.main] Reporter exit gracefully    
+18:56:16 [info] [coderrect] [main.go:1374:main.main] End the session    
+19:05:02 [info] [coderrect] [main.go:915:main.main] Start a new session. version=(hpc) 1.0.0 build 1614743351
+, args=[coderrect -t gcc -fopenmp -g parallel.c]    
+19:05:02 [info] [coderrect] [main.go:931:main.main] Check cleanBuild flag. cleanBuild=false    
+19:05:02 [info] [coderrect] [main.go:1000:main.main] Passed cmdline args via env. cmdlineOpts={"Opts":["-report.enableTerminal=true","-logger.logFolder=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/logs"]}    
+19:05:02 [info] [coderrect] [main.go:1137:main.main] Execute the build command to generate BC files. cmdline=[gcc -fopenmp -g parallel.c]    
+19:05:02 [info] [coderrect-clang] [main.go:60:main.main] Start a new session. args=[/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/coderrect-clang -fopenmp -g parallel.c]    
+19:05:02 [debug] [coderrect-clang] [compiler.go:270:shared.Compile] Gllvm start. compiler=clang, args=[-fopenmp -g parallel.c]    
+19:05:02 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=execfiles key=/home/camila/Documentos/Laboratorio-1-PP/a.out, value=    
+19:05:02 [info] [coderrect-clang] [compiler.go:301:shared.Compile] Add a binary into db. path=/home/camila/Documentos/Laboratorio-1-PP/a.out    
+19:05:02 [debug] [coderrect-clang] [compiler.go:333:shared.Compile] Compiling for bitcode. file=/home/camila/Documentos/Laboratorio-1-PP/a.out    
+19:05:02 [info] [coderrect-clang] [compiler.go:416:shared.buildBitcode] Generating bc file for binary. complilerExecName=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/clang, target=/home/camila/Documentos/Laboratorio-1-PP/a.out    
+19:05:02 [info] [coderrect-clang] [compiler.go:434:shared.buildBitcode] Derive BC file path from the binary. coderrectCwd=/home/camila/Documentos/Laboratorio-1-PP, BCFilePath=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+19:05:02 [debug] [coderrect-clang] [compiler.go:459:shared.buildBitcode] More information. inputFiles=[parallel.c], objectFiles=[], linkingLibFiles=[]    
+19:05:02 [debug] [coderrect-clang] [parser.go:497:shared.getArtifactNames] Generate the BC file path for the object file. srcFile=parallel.c, objFilePath=.parallel.c.o, BCFilePath=.parallel.c.o.bc    
+19:05:02 [debug] [coderrect-clang] [compiler.go:496:shared.buildBitcode] Try to build BC file. srcFile=parallel.c, bcFile=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+19:05:02 [debug] [coderrect-clang] [compiler.go:753:shared.skipSrcFile] CODERRECT building bitcode for file: parallel.c
+    
+19:05:02 [debug] [coderrect-clang] [compiler.go:869:shared.buildBitcodeFile] Build the BC file. compiler=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/clang, args=[-fopenmp -g -O1 -Wno-everything -g -Xclang -S -Xclang -emit-llvm -fno-discard-value-names -D_Float128=double -Xclang -disable-llvm-optzns -c parallel.c -o /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc]    
+19:05:02 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=/home/camila/Documentos/Laboratorio-1-PP/.parallel.c.o, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+19:05:03 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=parallel.c.o, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+19:05:03 [debug] [coderrect-clang] [compiler.go:678:shared.buildBitcode] Find the right llvm-link to use. llvm-link=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/llvm-link    
+19:05:03 [info] [coderrect-clang] [utils.go:95:shared.writeLinkFile] Create link file. linkFile=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.link, content=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/llvm-link;/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc;/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc    
+19:05:03 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=/home/camila/Documentos/Laboratorio-1-PP/a.out, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+19:05:03 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=bcfiles key=a.out, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+19:05:03 [debug] [coderrect-clang] [compiler.go:67:shared.insertIntoBoltDb] Insert a record into bold db. bucketName=linkfiles key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.link    
+19:05:03 [info] [coderrect-clang] [compiler.go:686:shared.buildBitcode] Create the BC file. file=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+19:05:03 [debug] [coderrect-clang] [main.go:67:main.main] Compiled is done. exitCode=0    
+19:05:03 [info] [coderrect] [main.go:1157:main.main] Finish the build of the project. cmdline=(export LD_PRELOAD=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/libear.so; /home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/coderrect-exec gcc -fopenmp -g parallel.c )    
+19:05:03 [debug] [coderrect] [main.go:328:main.getAllExecFromDB] Find all the executable file path from bolt db.    
+19:05:03 [info] [coderrect] [main.go:1221:main.main] On-demand link BC file. bcFile=/home/camila/Documentos/Laboratorio-1-PP/a.out.bc    
+19:05:03 [debug] [coderrect] [compiler.go:119:shared.queryBoltDb] result from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/a.out, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+19:05:03 [debug] [coderrect] [compiler.go:119:shared.queryBoltDb] result from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc, value=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.link    
+19:05:03 [debug] [coderrect] [compiler.go:119:shared.queryBoltDb] result from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc, value=    
+19:05:03 [info] [coderrect] [compiler.go:734:shared.LinkBitcode] On-demand linking. linker=/home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/clang/bin/llvm-link, linkArgs=[-o /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/.parallel.c.o.bc]    
+19:05:03 [debug] [coderrect] [compiler.go:140:shared.deleteFromBoltDb] delete key from bolt db. key=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc    
+19:05:03 [info] [coderrect] [main.go:1230:main.main] Analyzing BC file to detect races. bcFile=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc.bc    
+19:05:03 [info] [coderrect] [main.go:1263:main.main] Generating the json file. jsonPath=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/tmp/coderrect-1617408302/coderrect_a.out_report.json    
+19:05:03 [debug] [racedetect] [Log.cpp:46] Logging configs. level=1, logFolder=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/logs, logFile=log.current, enableTerminal=false, enableFile=true
+19:05:03 [info] [racedetect] [RaceDetector.cpp:602] Loading IR From File: /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/a.out.bc
+19:05:03 [info] [racedetect] [RaceDetector.cpp:425] Found stub file: /home/camila/Documentos/Laboratorio-1-PP/coderrect-linux-hpc-1.0.0/bin/stub/linux/std_thread.stub.bc
+19:05:03 [info] [racedetect] [RaceDetector.cpp:647] Running Compiler Optimization Passes
+19:05:03 [debug] [racedetect] [LockUnlockRewriter.cpp:131] Did not find lock/unlock API: lock=__kmpc_ordered, unlock=__kmpc_end_ordered
+19:05:03 [debug] [racedetect] [LockUnlockRewriter.cpp:131] Did not find lock/unlock API: lock=_mp_bcs_nest_red, unlock=_mp_ecs_nest_red
+19:05:03 [debug] [racedetect] [RemoveExceptionHandlerPass.cpp:25] Processing Exception Handlers
+19:05:03 [info] [racedetect] [CanonicalizeGEPPass.cpp:132] Canonicalizing Loops
+19:05:03 [info] [racedetect] [ConstantPropagationPass.cpp:173] Propagating Constants
+19:05:03 [info] [racedetect] [RaceDetector.cpp:701] Running Compiler Optimization Passes (Phase II)
+19:05:04 [info] [racedetect] [SolverBase.h:399] Pointer Analysis Starting to Solve
+19:05:04 [debug] [racedetect] [PartialUpdateSolver.h:317] PTA Iteration No: 0 - nodes: 538
+19:05:04 [debug] [racedetect] [PartialUpdateSolver.h:317] PTA Iteration No: 1 - nodes: 538
+19:05:04 [debug] [racedetect] [PartialUpdateSolver.h:317] PTA Iteration No: 2 - nodes: 538
+19:05:04 [info] [racedetect] [SolverBase.h:404] Pointer Analysis Finished Solving
+19:05:04 [debug] [racedetect] [SolverBase.h:407] PTA constraint graph node number 538, callgraph node number 54
+19:05:04 [info] [racedetect] [RaceDetectionPass.cpp:1912] Start Building SHB
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:1921] Start travering thread 0, thread start = cr_main
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : cr_main
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : main
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : Build_Array
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : Build_Array
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : Parallel_BS
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined.
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined.
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..2
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.1
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.1
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..2
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..4
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.3
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.3
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..4
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..6
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.5
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.5
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..6
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined..8
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:373] thread 0 enter func : .omp_outlined._debug__.7
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined._debug__.7
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : .omp_outlined..8
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : Parallel_BS
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : main
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:988] thread 0 exit func : cr_main
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:1979] Finish Building SHB. time=0.0209506s
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:1980] Number of threads: 1 
+19:05:04 [info] [racedetect] [RaceDetectionPass.cpp:1982] Start Race Detection
+19:05:04 [info] [racedetect] [RaceDetectionPass.cpp:1295] skip detecting races in a single-threaded program
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:1992] Finished Race Detection. time=2.0425e-05s
+19:05:04 [debug] [racedetect] [RaceDetectionPass.cpp:2180] Checking for missed omp regions
+19:05:04 [info] [reporter] [main.go:824:main.main] Check the cmdlineenv. cmdlineEnv={"Opts":["-report.enableTerminal=true","-logger.logFolder=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/logs"]}    
+19:05:04 [debug] [reporter] [main.go:515:main.diffRaceJSON] Diff file. base=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/basereport/raw_a.out.json, path=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/raw_a.out.json    
+19:05:04 [info] [reporter] [main.go:649:main.buildBase] read report.keepBase. value=false    
+19:05:04 [debug] [reporter] [main.go:661:main.buildBase] Building base report, src=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/report-tmp630872540, base=/home/camila/Documentos/Laboratorio-1-PP/.coderrect/basereport    
+19:05:04 [debug] [reporter] [main.go:665:main.buildBase] Copying to base from file: /home/camila/Documentos/Laboratorio-1-PP/.coderrect/build/raw_a.out.json    
+19:05:04 [debug] [reporter] [main.go:673:main.buildBase] Get and set GIT log to file    
+19:05:05 [info] [reporter] [main.go:995:main.main] Reporter exit gracefully    
+19:05:05 [info] [coderrect] [main.go:1374:main.main] End the session    
