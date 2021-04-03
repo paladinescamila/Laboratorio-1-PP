@@ -1,3 +1,4 @@
-# Laboratory 1
+# Laboratory 1: Parallel Bucket Sort with OpenMP
 
-Parallelizing a code in C.
+-   Compile: `gcc -o paralell -fopenmp parallel.c`
+-   Execute: `./parallel`
