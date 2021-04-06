@@ -59,11 +59,11 @@ int main() {
 
     if (min >= 0)
         min = 0;
-    
+
     t_start = omp_get_wtime();
     Bucket_Sort(array, n, max, min);
     t_wall_clock = omp_get_wtime() - t_start;
-    // printf("n = %d, time = %f\n", n, t_wall_clock);
+    printf("Time: %f\n", t_wall_clock);
 
     return 0;
 }

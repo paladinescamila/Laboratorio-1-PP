@@ -17,7 +17,7 @@ void Build_Array(int array[], int n){
 }
 
 
-void Parallel_BS(int array[], int n, int max, int min) {
+void Bucket_Sort(int array[], int n, int max, int min) {
 
     int i, j = 0;
     int cpos[max+1], cneg[-(min-1)];
@@ -57,7 +57,7 @@ void Parallel_BS(int array[], int n, int max, int min) {
 
 int main() {
     int array[N], i, n = N, max = 0, min = 0;
-    double s_original, s_parallel, t_original, t_parallel;
+    double t_start, t_wall_clock;
 
     Build_Array(array, n);
     
@@ -71,10 +71,10 @@ int main() {
     if (min >= 0)
         min = 0;
 
-    s_parallel = omp_get_wtime();
-    Parallel_BS(array, n, max, min);
-    t_parallel = omp_get_wtime() - s_parallel;
-    printf("Time: %f\n", t_parallel);
+    t_start = omp_get_wtime();
+    Bucket_Sort(array, n, max, min);
+    t_wall_clock = omp_get_wtime() - t_start;
+    printf("Time: %f\n", t_wall_clock);
 
     return 0;
 }
